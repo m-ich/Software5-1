@@ -16,10 +16,20 @@ public class IntToEng {
     	}
     	if (val == 2) {
     		int	a = n/10;
+    		int b = n%10;
     		if (a == 1) {
-    			
+    			if (n == 10) x = "ten";
+    			if (n == 11) x = "eleven";
+    			if (n == 12) x = "twelve";
+    			if (n == 13) x = "thirteen";
+    			if (n == 14) x = "fourteen";
+    			if (n == 15) x = "fifteen";
+    			if (n == 16) x = "sixteen";
+    			if (n == 17) x = "seventeen";
+    			if (n == 18) x = "eighteen";
+    			if (n == 19) x = "nineteen";
     		} else {
-    			hutaketa(a);
+    			x = hutaketa(a) + " " + hitoketa(b);
     		}
     	}
         return x;
@@ -42,6 +52,13 @@ public class IntToEng {
     static String hutaketa(int n) {
     	String x = null;
     	if (n == 2) x = "twenty";
+    	if (n == 3) x = "thirty";
+    	if (n == 4) x = "fourty";
+    	if (n == 5) x = "fifty";
+    	if (n == 6) x = "sixty";
+    	if (n == 7) x = "seventy";
+    	if (n == 8) x = "eighty";
+    	if (n == 9) x = "ninety";
     	return x;
     }
     
