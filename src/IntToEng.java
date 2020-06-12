@@ -18,6 +18,7 @@ public class IntToEng {
     	else if (val == 2) {
     		int	a = n/10;
     		int b = n%10;
+    		
     		if (a == 1) {
     			if (n == 10) x = "ten";
     			if (n == 11) x = "eleven";
@@ -36,6 +37,10 @@ public class IntToEng {
     				x = hutaketa(a) + " " + hitoketa(b);
     			}
     		}
+    	}
+    	else if (val ==3) {
+    		int c = n/100;
+    		x = sanketa(c) + " " + hutaketa(a) + " " + hitoketa(b);
     	}
         return x;
     }
@@ -65,6 +70,13 @@ public class IntToEng {
     	if (n == 7) x = "seventy";
     	if (n == 8) x = "eighty";
     	if (n == 9) x = "ninety";
+    	return x;
+    }
+    
+    static String sanketa(int n) {
+    	String x =null;
+    	if(n==1) x = "one hundred ";
+    	else x = hitoketa(n) + "hundreds"
     	return x;
     }
     
