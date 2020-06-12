@@ -1,18 +1,19 @@
 import java.util.Scanner;
 public class IntToEng {
-    // メインメソッド
+    // 繝｡繧､繝ｳ繝｡繧ｽ繝�繝�
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int input = sc.nextInt();
         System.out.println(translateEng(input));
     }
 
-    // 数値を英訳する変換するメソッド
+    // 謨ｰ蛟､繧定恭險ｳ縺吶ｋ螟画鋤縺吶ｋ繝｡繧ｽ繝�繝�
     static String translateEng(int n) {
     	String x = null;
     	int val = String.valueOf( n ).length();
     	if (val < 2) {
     		x = hitoketa(n);
+    		//!
     	}
     	if (val == 2) {
     		int	a = n/10;
