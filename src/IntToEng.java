@@ -9,13 +9,13 @@ public class IntToEng {
 
     // 謨ｰ蛟､繧定恭險ｳ縺吶ｋ螟画鋤縺吶ｋ繝｡繧ｽ繝�繝�
     static String translateEng(int n) {
-    	String x = null;
+    	String x = "";
     	int val = String.valueOf( n ).length();
     	if (val < 2) {
     		x = hitoketa(n);
     		//!
     	}
-    	if (val == 2) {
+    	else if (val == 2) {
     		int	a = n/10;
     		int b = n%10;
     		if (a == 1) {
@@ -30,7 +30,11 @@ public class IntToEng {
     			if (n == 18) x = "eighteen";
     			if (n == 19) x = "nineteen";
     		} else {
-    			x = hutaketa(a) + " " + hitoketa(b);
+    			if (b == 0) {
+    				x = hutaketa(a);
+    			} else {
+    				x = hutaketa(a) + " " + hitoketa(b);
+    			}
     		}
     	}
         return x;
@@ -38,6 +42,7 @@ public class IntToEng {
     
     static String hitoketa(int n) {
     	String x = null;
+    	if (n == 0) x = "zero";
     	if (n == 1) x = "one";
 		if (n == 2) x = "two";
 		if (n == 3) x = "three";
